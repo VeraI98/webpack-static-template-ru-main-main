@@ -1,0 +1,22 @@
+@use './components/variables' as *;
+@use './components/mixins' as *;
+@use './components/menu' as *;
+@use './components/services' as *;
+@use './components/brands' as *;
+@import '~swiper/swiper-bundle.css';
+
+.menu {
+  display: none;
+}
+@media (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .menu {
+    display: block;
+  }
+}
+ 

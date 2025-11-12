@@ -1,0 +1,214 @@
+
+$color-bg: #f8f8f8;
+$color-text: #1B1C21;
+$color-accent: #41F6D7;
+$color-tab-border: #B8FFEC;
+$color-tab-bg: #e8fffa;
+$color-gray: #7E7E82;
+$color-divider: #EAEAEA;
+$color-white: #fff;
+
+body {
+  margin: 0;
+  font-family: 'TT Lakes', sans-serif;
+  background-color: $color-bg;
+}
+
+.services {
+  margin: 0;
+  padding: 0;
+
+  // ---------- Верхняя панель ----------
+  &__topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-white;
+    padding: 16px;
+    height: 88px;
+    box-sizing: border-box;
+    border-bottom: 1px solid $color-divider;
+
+    @media (min-width: 1120px) {
+      display: none;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+
+  &__menu-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__logo {
+    width: 90px;
+    height: auto;
+  }
+
+  &__icons-group {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__action {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__divider {
+    width: 2px;
+    height: 32px;
+    background-color: $color-divider;
+  }
+
+  // ---------- Заголовок ----------
+  &__header {
+    margin: 24px 0 16px;
+    padding: 0;
+  }
+
+  &__title {
+    position: relative;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: $color-text;
+    padding-left: 20px;
+    margin-left: 16px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 4px;
+      height: 24px;
+      background-color: $color-accent;
+      border-radius: 2px;
+    }
+  }
+
+  // ---------- Меню вкладок ----------
+  &__menu {
+    display: flex;
+    overflow-x: auto;
+    gap: 8px;
+    padding: 0 16px 8px;
+    box-sizing: border-box;
+
+    &-tab {
+      font-size: 14px;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      padding: 8px 16px;
+      white-space: nowrap;
+      cursor: pointer;
+      color: $color-gray;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: $color-text;
+      }
+    }
+  }
+
+  input[type="radio"]:checked + &__menu-tab {
+    border: 2px solid $color-tab-border;
+    background: $color-tab-bg;
+    color: $color-text;
+  }
+
+  // ---------- Контент (текст + фото) ----------
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 16px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 36px;
+      margin: 24px 36px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    color: $color-text;
+    flex: 1;
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    .more-text {
+      display: none;
+      margin-top: 12px;
+    }
+
+    #readMore:checked + .more-text {
+      display: block;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    color: $color-text;
+    cursor: pointer;
+    margin-top: 8px;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-accent;
+    }
+
+    .services__arrow {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.2s;
+    }
+
+    &:hover .services__arrow {
+      transform: translateX(3px);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 530px;
+    height: auto;
+    border-radius: 8px;
+  }
+}

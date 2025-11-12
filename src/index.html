@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"/>
+    <title>CPS — Ремонт техники</title>
+    <meta name="description" content="Сервисный центр CPS — ремонт техники разных брендов." />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <div id="app"></div>
+    
+    <div class="layout">
+      <!-- Левое меню -->
+      <aside class="menu" id="sidebar" aria-label="Главное меню">
+        <div class="menu__content">
+          <div class="menu__header">
+            <button class="services__menu-btn js-toggle-sidebar" aria-label="Открыть меню">
+              <img
+                src="./img/icons/nagada.png"
+                alt=""
+                class="services__menu-icon"/>
+            </button>
+
+            <img src="./img/icons/logo.png" 
+            alt="Логотип CPS" 
+            class="menu__logo"/>
+
+            <button class="services__menu-btn" aria-label="Поиск">
+              <img
+                src="./img/icons/search.png"
+                alt=""
+                class="services__menu-icon"/>
+            </button>
+          </div>
+
+          <nav class="menu__nav" aria-label="Навигация сайта">
+            <ul class="menu__list">
+              <li><a href="#">Услуги и сервисы</a></li>
+              <li><a href="#">Корпоративным клиентам</a></li>
+              <li><a href="#">Продавцам техники</a></li>
+              <li><a href="#">Партнёрам</a></li>
+              <li><a href="#">Производителям</a></li>
+              <li><a href="#">Наши сервисные центры</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <div class="menu__footer">
+            <div class="menu__contacts" role="group" aria-label="Контакты">
+              <button type="button" aria-label="Позвонить"><img src="./img/icons/call.png" alt="" /></button>
+              <button type="button" aria-label="Чат"><img src="./img/icons/chat.png" alt="" /></button>
+              <button type="button" aria-label="Профиль"><img src="./img/icons/profile.png" alt="" /></button>
+            </div>
+            <div class="menu__info">
+              <p>mail@cps.com</p>
+              <p>8 800 890 8900</p>
+            </div>
+            <div class="menu__langs" role="group" aria-label="Язык">
+              <button type="button" class="active">RU</button>
+              <button type="button">EN</button>
+              <button type="button">CH</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Правая часть -->
+      <main class="content">
+        <section class="services">
+          <div class="services__topbar">
+            <div class="services__left">
+              <button class="services__menu-btn js-toggle-sidebar" aria-label="Открыть меню">
+                <img
+                  src="./img/icons/burger.png"
+                  alt=""
+                  class="services__menu-icon"
+                />
+              </button>
+              <img src="./img/icons/logo.png" class="services__logo" alt="Логотип CPS">
+            </div>
+
+            <div class="services__divider" aria-hidden="true"></div>
+
+            <div class="services__right">
+              <div class="services__icons-group">
+                <button class="services__action" type="button" aria-label="Позвонить">
+                  <img src="./img/icons/call.png" alt="" /> 
+                </button>
+                <button class="services__action" type="button" aria-label="Чат">
+                  <img src="./img/icons/chat.png" alt="" />
+                </button>
+                <button class="services__action" type="button" aria-label="Профиль">
+                  <img src="./img/icons/profile.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="services__header">
+            <h1 class="services__title">Услуги и сервисы</h1>
+          </div>
+
+          <div class="services__menu" role="tablist" aria-label="Меню услуг">
+            <input type="radio" name="tab" id="tab1" checked hidden />
+            <label for="tab1" class="services__menu-tab" role="tab">Ремонтируемые бренды</label>
+
+            <input type="radio" name="tab" id="tab2" hidden />
+            <label for="tab2" class="services__menu-tab" role="tab">Дополнительные услуги</label>
+
+            <input type="radio" name="tab" id="tab3" hidden />
+            <label for="tab3" class="services__menu-tab" role="tab">Цены на услуги</label>
+
+            <input type="radio" name="tab" id="tab4" hidden />
+            <label for="tab4" class="services__menu-tab" role="tab">Адреса сервисных центров</label>
+
+            <input type="radio" name="tab" id="tab5" hidden />
+            <label for="tab5" class="services__menu-tab" role="tab">Специальные акции</label>
+          </div>
+
+          <div class="services__content">
+            <div class="services__text">
+              <p>
+                Мы являемся авторизованным сервисным центром по ремонту техники
+                Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+                официальной гарантией производителя.
+              </p>
+
+              <input type="checkbox" id="readMore" hidden />
+              <div class="more-text" id="moreText">
+                <p>
+                  С 1992 года мы поддерживаем репутацию надежного партнера, что
+                  подтверждает большое количество постоянных клиентов. Мы
+                  гордимся тем, что нас рекомендуют друзьям и знакомым.
+                </p>
+              </div>
+
+              <label for="readMore" class="services__link" id="readMoreLabel" role="button" aria-controls="moreText">
+                Читать далее
+                <img
+                  src="./img/icons/icon.png"
+                  alt=""
+                  class="services__arrow"
+                />
+              </label>
+            </div>
+
+            <img
+              src="./img/MG_3223.png"
+              alt="Лого офиса CPS"
+              class="services__image"
+            />
+          </div>
+        </section>
+
+        <!-- БЛОК БРЕНДОВ -->
+        <section class="brands">
+          <h3 class="brands__title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h3>
+
+          <div class="brands__grid">
+            <div class="brands__row">
+              <button type="button" class="brands__btn">
+                <img src="./img/icons/Bitmap1.png" class="brands__icon" alt="Lenovo" />
+                <img src="./img/icons/go.png" class="brands__go" alt="" />
+              </button>
+              <button type="button" class="brands__btn">
+                <img src="./img/icons/Bitmap2.png" class="brands__icon" alt="Samsung" />
+                <img src="./img/icons/go.png" class="brands__go" alt="" />
+              </button>
+              <button type="button" class="brands__btn">
+                <img src="./img/icons/Bitmap3.png" class="brands__icon" alt="Apple" />
+                <img src="./img/icons/go.png" class="brands__go" alt="" />
+              </button>
+              <button type="button" class="brands__btn">
+                <img src="./img/icons/Bitmap4.png" class="brands__icon" alt="ViewSonic" />
+                <img src="./img/icons/go.png" class="brands__go" alt="" />
+              </button>
+            </div>
+
+            <div class="brands__row">
+              <button type="button" class="brands__btn">
+                <img src="./img/icons/Bitmap5.png" class="brands__icon" alt="Bosch" />
+                <img src="./img/icons/go.png" class="brands__go" alt="" />
+              </button>
+              
+              <button type="button" class="brands__btn">
+                <img src="./img/icons/Bitmap6.png" class="brands__icon" alt="HP" />
+                <img src="./img/icons/go.png" class="brands__go" alt="" />
+              </button>
+
+              <button type="button" class="brands__btn">
+                <img src="./img/icons/Bitmap7.png" class="brands__icon" alt="Acer" />
+                <img src="./img/icons/go.png" class="brands__go" alt="" />
+              </button>
+
+              <button type="button" class="brands__btn">
+                <img src="./img/icons/Bitmap8.png" class="brands__icon" alt="Asus" />
+                <img src="./img/icons/go.png" class="brands__go" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <div class="brands__extra" id="brandsExtra" aria-hidden="true">
+            <div class="brands__row">
+              <button type="button" class="brands__btn">
+                <img src="./img/icons/Bitmap1.png" class="brands__icon" alt="Lenovo"/>
+                <img src="./img/icons/go.png" class="brands__go" alt="" />
+              </button>
+
+              <button type="button" class="brands__btn">
+                <img src="./img/icons/Bitmap2.png" class="brands__icon" alt="Samsung"/>
+                <img src="./img/icons/go.png" class="brands__go" alt="" />
+              </button>
+
+              <button type="button" class="brands__btn">
+                <img src="./img/icons/Bitmap3.png" class="brands__icon" alt="Apple" />
+                <img src="./img/icons/go.png" class="brands__go" alt="" />
+              </button>
+
+              <button type="button" class="brands__btn">
+                <img src="./img/icons/Bitmap4.png" class="brands__icon" alt="ViewSonic"/>
+                <img src="./img/icons/go.png" class="brands__go" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <div class="brands__toggle js-brands-toggle" role="button" tabindex="0" aria-pressed="false">
+            <img src="./img/icons/icon.png" alt="" class="brands__arrow" />
+            <span class="brands__text">Показать все</span>
+          </div>
+
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <button type="button" class="brands__btn">
+                  <img src="./img/icons/Bitmap1.png" class="brands__icon" alt="Lenovo" />
+                  <img src="./img/icons/go.png" class="brands__go" alt="" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button type="button" class="brands__btn">
+                  <img src="./img/icons/Bitmap2.png" class="brands__icon" alt="Samsung" />
+                  <img src="./img/icons/go.png" class="brands__go" alt="" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button type="button" class="brands__btn">
+                  <img src="./img/icons/Bitmap3.png" class="brands__icon" alt="Apple" />
+                  <img src="./img/icons/go.png" class="brands__go" alt="" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button type="button" class="brands__btn">
+                  <img src="./img/icons/Bitmap5.png" class="brands__icon" alt="Bosch" />
+                  <img src="./img/icons/go.png" class="brands__go" alt="" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button type="button" class="brands__btn">
+                  <img src="./img/icons/Bitmap6.png" class="brands__icon" alt="HP" />
+                  <img src="./img/icons/go.png" class="brands__go" alt="" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button type="button" class="brands__btn">
+                  <img src="./img/icons/Bitmap7.png" class="brands__icon" alt="Acer" />
+                  <img src="./img/icons/go.png" class="brands__go" alt="" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

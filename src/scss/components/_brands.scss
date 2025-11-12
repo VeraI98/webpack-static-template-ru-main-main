@@ -1,0 +1,188 @@
+.brands {
+  padding: 24px 20px;
+  background-color: #f8f8f8;
+
+  &__title {
+    color: #7e7e82;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+
+  // --- Сетка брендов ---
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 8px 0;
+  }
+
+  // --- Кнопка бренда ---
+  &__btn {
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    width: 240px;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      transform: translateY(-2px);
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  &__icon {
+    width: 108px;
+    height: 38px;
+    object-fit: contain;
+  }
+
+  &__go {
+    width: 40px;
+    height: 40px;
+  }
+
+  // --- Показать все / скрыть ---
+  &__toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    color: #7e7e82;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      color: #333;
+    }
+  }
+
+  &__arrow {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+  }
+
+  &__extra {
+    display: none;
+    margin-top: 10px;
+    animation: fadeIn 0.3s ease;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // --- Swiper для мобильной версии ---
+  .mySwiper {
+    display: none;
+  }
+
+  // 📱 Мобильная версия
+  @media (min-width: 320px) and (max-width: 767px) {
+    padding: 24px 0;
+    margin-left: 0;
+    margin-right: 0;
+
+    &__grid,
+    &__extra,
+    &__toggle {
+      display: none !important;
+    }
+
+    .mySwiper {
+      display: block;
+      width: 100vw;
+      height: 120px;
+      padding: 10px 16px;
+      box-sizing: border-box;
+      margin-left: -20px;
+      position: relative;
+      left: 0;
+    }
+
+    .swiper-wrapper {
+      align-items: center;
+    }
+
+    .swiper-slide {
+      width: auto !important;
+      display: flex;
+      justify-content: flex-start;
+      box-sizing: border-box;
+    }
+
+    &__btn {
+      width: auto;
+      min-width: 200px;
+      height: 68px;
+      padding: 12px 14px;
+      margin: 0;
+      flex-shrink: 0;
+    }
+
+    .swiper-pagination {
+      margin-top: 6px;
+      position: relative;
+      bottom: auto;
+      transform: none;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      height: 20px;
+    }
+  }
+
+  // 💻 Планшеты
+  @media (min-width: 768px) and (max-width: 1100px) {
+    &__row {
+      flex-wrap: nowrap;
+    }
+
+    &__btn {
+      width: 200px;
+      height: 64px;
+      flex-shrink: 0;
+    }
+
+    // Скрываем последние элементы
+    &__row:nth-of-type(1) &__btn:nth-child(4),
+    &__row:nth-of-type(2) &__btn:nth-child(4) {
+      display: none;
+    }
+
+    .mySwiper {
+      display: none;
+    }
+  }
+}
