@@ -1,9 +1,8 @@
-@use './components/variables' as *;
-@use './components/mixins' as *;
-@use './components/menu' as *;
-@use './components/services' as *;
-@use './components/brands' as *;
-@import '~swiper/swiper-bundle.css';
+@use './components/mixins.scss' as *;
+@use './components/menu.scss' as *;
+@use './components/services.scss' as *;
+@use './components/brands.scss' as *;
+@import "swiper/swiper-bundle.css";
 
 .menu {
   display: none;
@@ -19,4 +18,3 @@
     display: block;
   }
 }
- 
