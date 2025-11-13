@@ -21,28 +21,25 @@ module.exports = {
   module: {
     rules: [
       // Transpile js with babel
-      {
-        test: /\.js$/,
-        include: path.resolve(__dirname, 'src/js'),
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
+    {
+      test: /\.scss$/,
+      use: [
+        MiniCssExtractPlugin.loader,
+        'css-loader',
+        'postcss-loader',
+        {
+          loader: 'sass-loader',
           options: {
-            presets: ['@babel/preset-env'],
-          }
-        }
-      },
+            implementation: require('sass'),
+            sassOptions: {
+              silenceDeprecations: ['legacy-js-api'], // ✅ тихо убирает warning
+            },
+          },
+        },
+      ],
+    },
 
-      // Compile SCSS to CSS
-      {
-        test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader, // Extract css to separate file
-          'css-loader', // translates CSS into CommonJS
-          'postcss-loader', // parse CSS and add vendor prefixes to CSS rules
-          'sass-loader', // compiles Sass to CSS, using Node Sass by default
-        ],
-      },
+
 
       // Include fonts from css
       {

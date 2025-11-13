@@ -13,17 +13,12 @@
   <body>
     <div id="app"></div>
     
+
     <div class="layout">
       <!-- Левое меню -->
       <aside class="menu" id="sidebar" aria-label="Главное меню">
         <div class="menu__content">
           <div class="menu__header">
-            <button class="services__menu-btn js-toggle-sidebar" aria-label="Открыть меню">
-              <img
-                src="./img/icons/nagada.png"
-                alt=""
-                class="services__menu-icon"/>
-            </button>
 
             <img src="./img/icons/logo.png" 
             alt="Логотип CPS" 
@@ -39,6 +34,10 @@
 
           <nav class="menu__nav" aria-label="Навигация сайта">
             <ul class="menu__list">
+              <div class="services__title-wrapper">
+                <span class="highlight"></span>
+                <h2 class="services__title">Ремонт техники</h2>
+              </div>
               <li><a href="#">Услуги и сервисы</a></li>
               <li><a href="#">Корпоративным клиентам</a></li>
               <li><a href="#">Продавцам техники</a></li>
@@ -88,20 +87,27 @@
             <div class="services__right">
               <div class="services__icons-group">
                 <button class="services__action" type="button" aria-label="Позвонить">
-                  <img src="./img/icons/call.png" alt="" /> 
+                  <img src="./img/icons/repair.png" alt="" /> Оставить заявку
                 </button>
                 <button class="services__action" type="button" aria-label="Чат">
-                  <img src="./img/icons/chat.png" alt="" />
-                </button>
-                <button class="services__action" type="button" aria-label="Профиль">
-                  <img src="./img/icons/profile.png" alt="" />
+                  <img src="./img/icons/checkstatus.png" alt="" />Статус ремонта 
                 </button>
               </div>
             </div>
           </div>
+        
 
           <div class="services__header">
             <h1 class="services__title">Услуги и сервисы</h1>
+            
+            <div class="services__icons-group2">
+                <button class="services__action" type="button" aria-label="Позвонить">
+                  <img src="./img/icons/repair.png" alt="" /> Оставить заявку
+                </button>
+                <button class="services__action" type="button" aria-label="Чат">
+                  <img src="./img/icons/checkstatus.png" alt="" />Статус ремонта 
+                </button>
+              </div>
           </div>
 
           <div class="services__menu" role="tablist" aria-label="Меню услуг">
@@ -275,6 +281,132 @@
             <div class="swiper-pagination"></div>
           </div>
         </section>
+
+
+        <section class="devices">
+          <h3 class="devices__title">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h3>
+
+          <div class="devices__extra" id="devicesExtra" aria-hidden="true">
+            <div class="devices__row">
+              <button type="button" class="brands__btn">
+                <h4 class="devices__button">Ремонт ноутбуков</h4>
+                <img src="./img/icons/go.png" class="devices__go" alt="" />
+              </button>
+
+              <button type="button" class="brands__btn">
+                <h4 class="devices__button">Ремонт планшетов</h4>
+                <img src="./img/icons/go.png" class="devices__go" alt="" />
+              </button>
+
+              <button type="button" class="brands__btn">
+                <h4 class="devices__button">Ремонт ПК</h4>
+                <img src="./img/icons/go.png" class="devices__go" alt="" />
+              </button>
+
+              <button type="button" class="brands__btn">
+                <h4 class="devices__button">Ремонт мониторов</h4>
+                <img src="./img/icons/go.png" class="devices__go" alt="" />
+              </button>
+            </div>
+
+
+
+            <div class="devices__row">
+              <button type="button" class="brands__btn">
+                <h4 class="devices__button">Ремонт ноутбуков</h4>
+                <img src="./img/icons/go.png" class="devices__go" alt="" />
+              </button>
+
+              <button type="button" class="brands__btn">
+                <h4 class="devices__button">Ремонт планшетов</h4>
+                <img src="./img/icons/go.png" class="devices__go" alt="" />
+              </button>
+
+              <button type="button" class="brands__btn">
+                <h4 class="devices__button">Ремонт ПК</h4>
+                <img src="./img/icons/go.png" class="devices__go" alt="" />
+              </button>
+
+              <button type="button" class="brands__btn">
+                <h4 class="devices__button">Ремонт мониторов</h4>
+                <img src="./img/icons/go.png" class="devices__go" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <div class="brands__toggle js-brands-toggle" role="button" tabindex="0" aria-pressed="false">
+            <img src="./img/icons/icon.png" alt="" class="brands__arrow" />
+            <span class="brands__text">Показать все</span>
+          </div>
+        </section>
+
+
+
+        <!-- БЛОК ЦЕН НА УСЛУГИ -->
+        <section class="prices">
+          <h2 class="prices__title">ЦЕНЫ НА УСЛУГИ</h2>
+          <table class="prices__table">
+            <thead>
+              <tr>
+                <th>Ремонтные услуги</th>
+                <th>Цена</th>
+                <th>Срок</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Диагностика</td>
+                <td>Бесплатно</td>
+                <td>30 мин</td>
+                <td><button class="prices__btn">ЗАКАЗАТЬ</button></td>
+              </tr>
+              <tr>
+                <td>Замена дисплея</td>
+                <td>1000 ₽</td>
+                <td>30–120 мин</td>
+                <td><button class="prices__btn">ЗАКАЗАТЬ</button></td>
+              </tr>
+              <tr>
+                <td>Замена полифонического динамика</td>
+                <td>1000 ₽</td>
+                <td>30–120 мин</td>
+                <td><button class="prices__btn">ЗАКАЗАТЬ</button></td>
+              </tr>
+              <tr>
+                <td>Тестирование с выдачей технического заключения</td>
+                <td>1000 ₽</td>
+                <td>30–120 мин</td>
+                <td><button class="prices__btn">ЗАКАЗАТЬ</button></td>
+              </tr>
+              <tr>
+                <td>Замена программного обеспечения</td>
+                <td>1000 ₽</td>
+                <td>30–120 мин</td>
+                <td><button class="prices__btn">ЗАКАЗАТЬ</button></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="prices__note">
+            <p>
+              Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу.
+              Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.
+            </p>
+            <a href="#" class="prices__offer">Получить коммерческое предложение ></a>
+          </div>
+        </section>
+
+
+        <!-- ФУТЕР -->
+        <footer class="footer">
+          <p>© 2019 CPS</p>
+          <p>Разработано компанией Аэродизайн</p>
+          <p>Политика конфиденциальности</p>
+          <p>Информация, размещенная на данной странице, не является публичной офертой</p>
+        </footer>
+
+
       </main>
     </div>
 
