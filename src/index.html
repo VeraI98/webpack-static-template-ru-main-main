@@ -101,14 +101,15 @@
             <h1 class="services__title">Услуги и сервисы</h1>
             
             <div class="services__icons-group2">
-                <button class="services__action" type="button" aria-label="Позвонить">
-                  <img src="./img/icons/repair.png" alt="" /> Оставить заявку
-                </button>
-                <button class="services__action" type="button" aria-label="Чат">
-                  <img src="./img/icons/checkstatus.png" alt="" />Статус ремонта 
-                </button>
-              </div>
+              <button class="services__action" type="button" aria-label="Позвонить">
+                <img src="./img/icons/repair.png" alt="" /> Оставить заявку
+              </button>
+              <button class="services__action" type="button" aria-label="Чат">
+                <img src="./img/icons/checkstatus.png" alt="" />Статус ремонта 
+              </button>
+            </div>
           </div>
+
 
           <div class="services__menu" role="tablist" aria-label="Меню услуг">
             <input type="radio" name="tab" id="tab1" checked hidden />
@@ -283,60 +284,60 @@
         </section>
 
 
+        <!-- БЛОК ВИДОВ ТЕХНИКИ -->
+
         <section class="devices">
           <h3 class="devices__title">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h3>
 
-          <div class="devices__extra" id="devicesExtra" aria-hidden="true">
-            <div class="devices__row">
-              <button type="button" class="brands__btn">
-                <h4 class="devices__button">Ремонт ноутбуков</h4>
-                <img src="./img/icons/go.png" class="devices__go" alt="" />
-              </button>
-
-              <button type="button" class="brands__btn">
-                <h4 class="devices__button">Ремонт планшетов</h4>
-                <img src="./img/icons/go.png" class="devices__go" alt="" />
-              </button>
-
-              <button type="button" class="brands__btn">
-                <h4 class="devices__button">Ремонт ПК</h4>
-                <img src="./img/icons/go.png" class="devices__go" alt="" />
-              </button>
-
-              <button type="button" class="brands__btn">
-                <h4 class="devices__button">Ремонт мониторов</h4>
-                <img src="./img/icons/go.png" class="devices__go" alt="" />
-              </button>
+          <div class="devices__row">
+            <div class="devices__card">
+              <span>Ремонт ноутбуков</span>
+              <img src="./img/icons/go.png" class="devices__icon" alt="">
             </div>
 
+            <div class="devices__card">
+              <span>Ремонт планшетов</span>
+              <img src="./img/icons/go.png" class="devices__icon" alt="">
+            </div>
 
+            <div class="devices__card">
+              <span>Ремонт ПК</span>
+              <img src="./img/icons/go.png" class="devices__icon" alt="">
+            </div>
 
-            <div class="devices__row">
-              <button type="button" class="brands__btn">
-                <h4 class="devices__button">Ремонт ноутбуков</h4>
-                <img src="./img/icons/go.png" class="devices__go" alt="" />
-              </button>
-
-              <button type="button" class="brands__btn">
-                <h4 class="devices__button">Ремонт планшетов</h4>
-                <img src="./img/icons/go.png" class="devices__go" alt="" />
-              </button>
-
-              <button type="button" class="brands__btn">
-                <h4 class="devices__button">Ремонт ПК</h4>
-                <img src="./img/icons/go.png" class="devices__go" alt="" />
-              </button>
-
-              <button type="button" class="brands__btn">
-                <h4 class="devices__button">Ремонт мониторов</h4>
-                <img src="./img/icons/go.png" class="devices__go" alt="" />
-              </button>
+            <div class="devices__card">
+              <span>Ремонт мониторов</span>
+              <img src="./img/icons/go.png" class="devices__icon" alt="">
             </div>
           </div>
 
-          <div class="brands__toggle js-brands-toggle" role="button" tabindex="0" aria-pressed="false">
-            <img src="./img/icons/icon.png" alt="" class="brands__arrow" />
-            <span class="brands__text">Показать все</span>
+
+          
+          <div class="devices__extra hidden">
+            <div class="devices__card">
+              <span>Ремонт телефонов</span>
+              <img src="./img/icons/go.png" class="devices__icon" alt="">
+            </div>
+
+            <div class="devices__card">
+              <span>Ремонт принтеров</span>
+              <img src="./img/icons/go.png" class="devices__icon" alt="">
+            </div>
+
+            <div class="devices__card">
+              <span>Ремонт телевизоров</span>
+              <img src="./img/icons/go.png" class="devices__icon" alt="">
+            </div>
+
+            <div class="devices__card">
+              <span>Ремонт колонок</span>
+              <img src="./img/icons/go.png" class="devices__icon" alt="">
+            </div>
+          </div>
+
+          <div class="devices__toggle">
+            <img src="./img/icons/icon.png" class="devices__arrow">
+            <span class="devices__text">Показать все</span>
           </div>
         </section>
 
@@ -359,51 +360,66 @@
                 <td>Диагностика</td>
                 <td>Бесплатно</td>
                 <td>30 мин</td>
-                <td><button class="prices__btn">ЗАКАЗАТЬ</button></td>
+                <td><button class="prices__btn">ЗАКАЗАТЬ
+                  <img src="./img/icons/dropdown.png" class="prices__go" alt="" />
+                </button></td>
               </tr>
               <tr>
                 <td>Замена дисплея</td>
                 <td>1000 ₽</td>
                 <td>30–120 мин</td>
-                <td><button class="prices__btn">ЗАКАЗАТЬ</button></td>
+                <td><button class="prices__btn">ЗАКАЗАТЬ
+                  <img src="./img/icons/dropdown.png" class="prices__go" alt="" />
+                </button></td>
               </tr>
               <tr>
                 <td>Замена полифонического динамика</td>
                 <td>1000 ₽</td>
                 <td>30–120 мин</td>
-                <td><button class="prices__btn">ЗАКАЗАТЬ</button></td>
+                <td><button class="prices__btn">ЗАКАЗАТЬ
+                  <img src="./img/icons/dropdown.png" class="prices__go" alt="" />
+                </button></td>
               </tr>
               <tr>
                 <td>Тестирование с выдачей технического заключения</td>
                 <td>1000 ₽</td>
                 <td>30–120 мин</td>
-                <td><button class="prices__btn">ЗАКАЗАТЬ</button></td>
+                <td><button class="prices__btn">ЗАКАЗАТЬ
+                  <img src="./img/icons/dropdown.png" class="prices__go" alt="" />
+                </button></td>
               </tr>
               <tr>
                 <td>Замена программного обеспечения</td>
                 <td>1000 ₽</td>
                 <td>30–120 мин</td>
-                <td><button class="prices__btn">ЗАКАЗАТЬ</button></td>
+                <td><button class="prices__btn">ЗАКАЗАТЬ
+                  <img src="./img/icons/dropdown.png" class="prices__go" alt="" />
+                </button></td>
               </tr>
             </tbody>
           </table>
 
           <div class="prices__note">
-            <p>
-              Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу.
-              Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.
-            </p>
-            <a href="#" class="prices__offer">Получить коммерческое предложение ></a>
+            <p> Все цены указаны с учетом НДС. Стоимость ремонта указана</p> 
+            <p>на единичную услугу. Для получения коммерческого </p>
+            <p>предложения на постоянное обслуживание, оставьте заявку.</p>
+            <a href="#" class="prices__offer">
+              <span class="offer__text">Получить коммерческое предложение</span>
+              <span class="offer__arrow">></span>
+            </a>
+
           </div>
         </section>
 
 
         <!-- ФУТЕР -->
         <footer class="footer">
-          <p>© 2019 CPS</p>
-          <p>Разработано компанией Аэродизайн</p>
-          <p>Политика конфиденциальности</p>
-          <p>Информация, размещенная на данной странице, не является публичной офертой</p>
+          <div class="footer__line"></div>
+          <div class="footer__info">
+            <p>© 2019 CPS<br>Разработано компанией Аэродизайн</p>
+            <p>Политика конфиденциальности</p>
+            <p>Информация, размещенная на данной странице, не является публичной офертой</p>
+          </div>
         </footer>
 
 
