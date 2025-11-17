@@ -2,7 +2,7 @@
   padding: 40px 20px;
   font-family: 'TTLakes-Regular', sans-serif;
 
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
 
   &__title {
     color: #7e7e82;
@@ -16,10 +16,10 @@
     width: 100%;
     margin-bottom: 20px;
     border-collapse: collapse;
-    background-color: #fff; 
+    background-color: #fff;
 
     thead {
-      background-color: #F8F8F8; 
+      background-color: #f8f8f8;
 
       th {
         padding: 12px 16px;
@@ -52,7 +52,7 @@
   }
 
   &__btn {
-    background-color: #FF3E79; 
+    background-color: #ff3e79;
     color: #fff;
     font-weight: 600;
     padding: 8px 16px;
@@ -62,6 +62,114 @@
 
     &:hover {
       background-color: #e0267a;
+    }
+  }
+
+  &__go {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  // Swiper для мобильной версии
+  .pricesSwiper {
+    display: none;
+  }
+
+  // Стили для карточек в Swiper
+  &__card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    height: 120px;
+    min-width: 200px;
+  }
+
+  &__card-label {
+    font-size: 12px;
+    color: #7e7e82;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+
+  &__card-service {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  &__card-price {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+
+  &__card-time {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 0;
+  }
+
+  &__card .prices__btn {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    padding: 6px 10px;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  // 📱 Мобильная версия - карточки вместо таблицы
+  @media (min-width: 320px) and (max-width: 767px) {
+    padding: 24px 0;
+    margin-left: 0;
+    margin-right: 0;
+
+    &__table {
+      display: none;
+    }
+
+    &__note {
+      padding: 0 16px;
+    }
+
+    .pricesSwiper {
+      display: block;
+      width: 100vw;
+      min-height: 160px;
+      padding: 10px 16px;
+      box-sizing: border-box;
+      margin-left: 0;
+      position: relative;
+      left: 0;
+    }
+
+    .pricesSwiper .swiper-wrapper {
+      align-items: center;
+    }
+
+    .pricesSwiper .swiper-slide {
+      width: auto !important;
+      display: flex;
+      justify-content: flex-start;
+      box-sizing: border-box;
+    }
+
+    .pricesSwiper .swiper-pagination {
+      margin-top: 6px;
+      position: relative;
+      bottom: auto;
+      transform: none;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      height: 20px;
     }
   }
 }
@@ -79,10 +187,11 @@
   }
 
   .prices__note {
-  max-width: 420px;
-  margin-bottom: 40px;
-  line-height: 1.35;
-  color: #333;}
+    max-width: 420px;
+    margin-bottom: 40px;
+    line-height: 1.35;
+    color: #333;
+  }
 
   p {
     margin: 0;
@@ -105,7 +214,7 @@
     }
 
     .offer__arrow {
-      color: #FF3E9D;
+      color: #ff3e9d;
       font-size: 16px;
       font-weight: 600;
       line-height: 1;

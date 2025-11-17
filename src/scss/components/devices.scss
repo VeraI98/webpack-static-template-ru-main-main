@@ -1,6 +1,6 @@
 .devices {
   padding: 40px 20px;
-  background: #F8F8F8;
+  background: #f8f8f8;
 
   &__title {
     color: #7e7e82;
@@ -23,11 +23,13 @@
     animation: fadeIn 0.3s ease;
 
     &.show {
-      display: grid;
+      display: grid !important;
+    }
+
+    &.hidden {
+      display: none;
     }
   }
-
-
 
   &__card {
     background: #fff;
@@ -48,7 +50,6 @@
     border: 1px solid rgba(0, 0, 0, 0.05);
   }
 
-
   &__icon {
     width: 40px;
     height: 40px;
@@ -60,9 +61,6 @@
   .hidden {
     display: none;
   }
-
-
-
 
   /* --- Показать все --- */
   &__toggle {
@@ -87,7 +85,6 @@
     transition: transform 0.3s ease;
   }
 
-
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -96,6 +93,75 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  // Swiper для мобильной версии
+  .devicesSwiper {
+    display: none;
+  }
+
+  // 💻 Планшеты
+  @media (min-width: 768px) and (max-width: 1119px) {
+    &__row,
+    &__extra {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    // Скрываем 4-ю карточку в основной строке
+    &__row &__card:nth-child(4) {
+      display: none;
+    }
+
+    // Скрываем 4-ю карточку в дополнительной строке
+    &__extra &__card:nth-child(4) {
+      display: none;
+    }
+  }
+
+  // 📱 Мобильная версия
+  @media (min-width: 320px) and (max-width: 767px) {
+    padding: 24px 0;
+    margin-left: 0;
+    margin-right: 0;
+
+    &__row,
+    &__extra,
+    &__toggle {
+      display: none !important;
+    }
+
+    .devicesSwiper {
+      display: block;
+      width: 100vw;
+      min-height: 160px;
+      padding: 10px 16px;
+      box-sizing: border-box;
+      margin-left: 0;
+      position: relative;
+      left: 0;
+    }
+
+    .devicesSwiper .swiper-wrapper {
+      align-items: center;
+    }
+
+    .devicesSwiper .swiper-slide {
+      width: auto !important;
+      display: flex;
+      justify-content: flex-start;
+      box-sizing: border-box;
+    }
+
+    .devicesSwiper .swiper-pagination {
+      margin-top: 6px;
+      position: relative;
+      bottom: auto;
+      transform: none;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      height: 20px;
     }
   }
 }

@@ -5,11 +5,18 @@
 @use './components/prices.scss' as *;
 @use './components/devices.scss' as *;
 @use './components/footer.scss' as *;
-@import "swiper/swiper-bundle.css";
+@import 'swiper/swiper-bundle.css';
 
 .menu {
   display: none;
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .menu {
+    display: flex;
+  }
+}
+
 @media (min-width: 768px) {
   .menu {
     display: none;

@@ -1,10 +1,10 @@
 $color-bg: #f8f8f8;
-$color-text: #1B1C21;
-$color-accent: #41F6D7;
-$color-tab-border: #B8FFEC;
+$color-text: #1b1c21;
+$color-accent: #41f6d7;
+$color-tab-border: #b8ffec;
 $color-tab-bg: #e8fffa;
-$color-gray: #7E7E82;
-$color-divider: #EAEAEA;
+$color-gray: #7e7e82;
+$color-divider: #eaeaea;
 $color-white: #fff;
 
 body {
@@ -17,7 +17,6 @@ body {
   margin: 0;
   padding: 0;
 
-  
   &__topbar {
     display: flex;
     justify-content: space-between;
@@ -27,6 +26,16 @@ body {
     height: 88px;
     box-sizing: border-box;
     border-bottom: 1px solid $color-divider;
+    width: 100%;
+    margin: 0;
+
+    @media (min-width: 320px) and (max-width: 767px) {
+      width: 100vw;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
 
     @media (min-width: 1120px) {
       display: none;
@@ -67,6 +76,55 @@ body {
   &__icons-group2 {
     display: flex;
     gap: 16px;
+
+    @media (max-width: 1119px) {
+      display: none;
+    }
+  }
+
+  // Иконки для мобильных (320-767)
+  &__icons-mobile {
+    display: none;
+    gap: 16px;
+    align-items: center;
+
+    @media (min-width: 320px) and (max-width: 767px) {
+      display: flex;
+    }
+  }
+
+  // Иконки для планшетов (768-1119)
+  &__icons-tablet {
+    display: none;
+    gap: 16px;
+    align-items: center;
+
+    @media (min-width: 768px) and (max-width: 1119px) {
+      display: flex;
+    }
+  }
+
+  &__icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background-color: $color-tab-bg;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &__action {
@@ -85,8 +143,8 @@ body {
     }
 
     img {
-      width: 20px;
-      height: 20px;
+      width: 40px;
+      height: 40px;
     }
   }
 
@@ -94,13 +152,25 @@ body {
     width: 2px;
     height: 32px;
     background-color: $color-divider;
+
+    @media (min-width: 320px) and (max-width: 767px) {
+      display: none;
+    }
+
+    @media (min-width: 768px) and (max-width: 1119px) {
+      display: block;
+    }
+
+    @media (min-width: 1120px) {
+      display: none;
+    }
   }
 
   // ---------- Заголовок с логотипом и кнопками ----------
   &__header {
-    display: flex;                      // flex-контейнер
-    justify-content: space-between;     // логотип слева, кнопки справа
-    align-items: center;                // выравнивание по вертикали
+    display: flex; // flex-контейнер
+    justify-content: space-between; // логотип слева, кнопки справа
+    align-items: center; // выравнивание по вертикали
     padding: 0 16px;
     margin: 24px 0 16px;
   }
@@ -115,7 +185,7 @@ body {
     margin-left: 16px;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
       top: 4px;
@@ -151,7 +221,7 @@ body {
     }
   }
 
-  input[type="radio"]:checked + &__menu-tab {
+  input[type='radio']:checked + &__menu-tab {
     border: 2px solid $color-tab-border;
     background: $color-tab-bg;
     color: $color-text;
